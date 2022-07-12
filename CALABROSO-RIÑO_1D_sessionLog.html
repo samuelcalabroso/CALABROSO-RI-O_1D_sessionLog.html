@@ -1,0 +1,93 @@
+<?php
+    if (isset($_COOKIE['email'])) and isset($_COOKIE['pass'])  {
+        $email =   $_COOKIE['email'];
+        $pass = $_COOKIE['pass'];
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  color: whitesmoke;
+  background-color: #5CA4A9;
+  font-family: "Poppins", sans-serif;  
+  font-size: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 40px 8px 10px 8px; 
+  color: #81F7E5;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#formContent {
+  border-radius: 10px 10px 10px 10px;
+  background: #183A37;
+  padding: 30px;
+  width: 90%;
+  max-width: 470px;
+  padding: 10px;
+  box-shadow: 10px 30px 60px 0px #10FFCB;
+  text-align: center;
+  appearance: auto;
+}
+input[type=submit] {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;   
+}
+input{
+  background-color: #f6f6f6;
+  border: none;
+  color: black;
+  padding: 1px 3px;
+  text-align: center;
+  text-decoration: none; 
+  font-size: 16px;
+  margin: 5px;
+  width: auto;
+  border: 2px solid #70FFE0;
+}
+        </style>
+        
+
+     <link rel="stylesheet" href=""> 
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    
+    <h2 > Login form Using Sessions and Cookies with Remember me</h2>
+    
+    <form method="post" action="CALABROSO-RIÑO_1D_validate.php">
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email" required>
+      <input type="password" id="password" class="fadeIn third" name="pass" placeholder="password" required>
+      <input type="submit" class="fadeIn fourth" value="login" name = "login"> <br>
+      <input type="checkbox" name="remember" value="1">
+      <label for="remember"> Remember</label>
+    </form>
+  </div>
+</div>  
+</body>
+</html>
